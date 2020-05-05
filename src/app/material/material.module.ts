@@ -14,6 +14,11 @@ import {
   MatCardModule,
   MatTabsModule,
   MatStepperModule,
+  MatInputModule,
+  MatSelectModule,
+  MatAutocompleteModule,
+  MatCheckboxModule,
+  MatRadioModule,
 } from "@angular/material";
 
 const MaterialComponent = [
@@ -30,7 +35,12 @@ const MaterialComponent = [
   MatExpansionModule,
   MatCardModule,
   MatTabsModule,
-  MatStepperModule
+  MatStepperModule,
+  MatInputModule,
+  MatSelectModule,
+  MatAutocompleteModule,
+  MatCheckboxModule,
+  MatRadioModule
 ];
 
 @NgModule({

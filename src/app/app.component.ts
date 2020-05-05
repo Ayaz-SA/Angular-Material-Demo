@@ -15,6 +15,7 @@ export class AppComponent {
     { icon: 'reorder', link: 'mat-expansion', title: 'Mat-Expansion-Panel'},
     { icon: 'view_compact', link: 'mat-card', title: 'Mat-Card'},
     { icon: 'table_chart', link: 'mat-tabs', title: 'Mat-Tab & Mat-Stepper'},
+    { icon: 'create', link: 'mat-input', title: 'Mat-Input'},
   ]
   ngOnInit() {
   }

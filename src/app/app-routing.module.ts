@@ -7,6 +7,7 @@ import { MatBadgesComponent } from './mat-badges/mat-badges.component';
 import { MatExpansionPanelComponent } from './mat-expansion-panel/mat-expansion-panel.component';
 import { MatCardComponent } from './mat-card/mat-card.component';
 import { MatTabComponent } from './mat-tab/mat-tab.component';
+import { MatInputModuleComponent } from './mat-input-module/mat-input-module.component';
 
 
 const routes: Routes = [
@@ -37,6 +38,10 @@ const routes: Routes = [
   {
     path: 'mat-tabs',
     component: MatTabComponent
+  },
+  {
+    path: 'mat-input',
+    component: MatInputModuleComponent
   }
 ];
 

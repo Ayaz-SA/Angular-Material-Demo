@@ -1,0 +1,88 @@
+<div>
+  <!-- auto-complete -->
+  <mat-card class="auto">
+    <mat-card-title align="center">Auto Complete Demo</mat-card-title>
+    <mat-card-content align="center">This is demo of auto complete module</mat-card-content>
+
+    <mat-grid-list cols="1" rowHeight="100px" gutterSize="10px">
+      <mat-grid-tile>
+        <form>
+          <mat-form-field>
+            <mat-label>Technology</mat-label>
+            <input type="text" matInput [matAutocomplete]="auto" [formControl]="myControl">
+            <mat-autocomplete #auto="matAutocomplete">
+              <mat-option *ngFor="let tech of filteredTechnology | async" [value]="tech">
+                {{ tech }}
+              </mat-option>
+            </mat-autocomplete>
+          </mat-form-field>
+        </form>
+      </mat-grid-tile>
+    </mat-grid-list>
+  </mat-card>
+
+  <mat-divider></mat-divider>
+
+  <mat-card>
+    <mat-card-title align="center">Input Demo</mat-card-title>
+    <mat-card-content align="center">This is demo of input module</mat-card-content>
+
+    <mat-grid-list cols="2" rowHeight="100px" gutterSize="10px">
+      <mat-grid-tile>
+        <mat-form-field appearance="legacy" color="accent">
+          <mat-label>Name</mat-label>
+          <input matInput required>
+          <mat-hint>Min 5 character</mat-hint>
+        </mat-form-field>
+      </mat-grid-tile>
+
+      <mat-grid-tile>
+        <mat-form-field appearance="outline" color="warn">
+          <mat-label>Email</mat-label>
+          <input matInput required>
+          <mat-hint>info@example.com</mat-hint>
+        </mat-form-field>
+      </mat-grid-tile>
+
+      <mat-grid-tile>
+        <mat-form-field>
+          <mat-label>Technology</mat-label>
+          <mat-select [(value)]="selectedTechnology">
+            <mat-option>None</mat-option>
+            <mat-option value="angular">Angular</mat-option>
+            <mat-option value="nodejs">NodeJs</mat-option>
+            <mat-option value="react">React</mat-option>
+          </mat-select>
+        </mat-form-field>
+        <p>{{ selectedTechnology }}</p>
+      </mat-grid-tile>
+
+      <mat-grid-tile>
+        <mat-form-field>
+          <mat-label>Technology</mat-label>
+          <mat-select [(value)]="multipleSelectedTech" multiple>
+            <mat-option>None</mat-option>
+            <mat-option value="angular">Angular</mat-option>
+            <mat-option value="nodejs">NodeJs</mat-option>
+            <mat-option value="react">React</mat-option>
+          </mat-select>
+        </mat-form-field>
+        <p>{{ multipleSelectedTech }}</p>
+      </mat-grid-tile>
+      <mat-grid-tile>
+        <mat-checkbox color="warn">Angular</mat-checkbox>
+        <mat-checkbox>NodeJs</mat-checkbox>
+        <mat-checkbox color="primary">React</mat-checkbox>
+        <mat-checkbox>Flutter</mat-checkbox>
+      </mat-grid-tile>
+      <mat-grid-tile>
+        <mat-radio-group>
+          <mat-radio-button value="angular">Angular</mat-radio-button>
+          <mat-radio-button value="nodejs" color="warn">NodeKs</mat-radio-button>
+          <mat-radio-button value="react" color="primary">React</mat-radio-button>
+        </mat-radio-group>
+      </mat-grid-tile>
+    </mat-grid-list>
+  </mat-card>
+
+</div>
