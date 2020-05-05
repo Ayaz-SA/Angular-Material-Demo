@@ -1,0 +1,33 @@
+
+
+.navbar {
+  background-color: #ffffff;
+}
+
+span {
+  padding-right: 1rem;
+}
+mat-sidenav-container {
+  height: 100%;
+}
+
+mat-sidenav {
+  background-color: lightcoral;
+  width: 250px;
+}
+
+.list-content {
+  margin: 20px;
+}
+a {
+  margin: 20px;
+  text-decoration: none;
+}
+.menu, a{
+  color: #ffffff;
+
+}
+
+mat-grid-tile{
+  background-color: lightblue;
+}

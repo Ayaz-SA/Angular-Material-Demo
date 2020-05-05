@@ -1,0 +1,55 @@
+<mat-tab-group #tabRef (selectedTabChange)="logChange(tabRef.selectedIndex + 1)">
+  <mat-tab label="Angular">Angular Content</mat-tab>
+  <mat-tab label="Node">NodeJs Content</mat-tab>
+  <mat-tab label="MySQL">MySQL Content</mat-tab>
+</mat-tab-group>
+{{ tabRef.selectedIndex + 1 }}
+
+<mat-divider></mat-divider>
+
+<!-- stepper -->
+<mat-horizontal-stepper linear>
+  <mat-step label="Shipping Address" completed="true">
+    <p>Shipping Address Details</p>
+    <div>
+      <button mat-button matStepperNext>Next</button>
+    </div>
+  </mat-step>
+  <mat-step label="Billing Address" completed="false" optional>
+    <p>Billing Address Details</p>
+    <div>
+      <button mat-button matStepperPrevious>Back</button>
+      <button mat-button matStepperNext>Next</button>
+    </div>
+  </mat-step>
+  <mat-step label="Place Order" completed="false">
+    <p>Order Details</p>
+    <div>
+      <button mat-button matStepperPrevious>Back</button>
+    </div>
+  </mat-step>
+</mat-horizontal-stepper>
+
+<mat-divider></mat-divider>
+
+<mat-vertical-stepper linear>
+  <mat-step label="Shipping Address" completed="true">
+    <p>Shipping Address Details</p>
+    <div>
+      <button mat-button matStepperNext>Next</button>
+    </div>
+  </mat-step>
+  <mat-step label="Billing Address" completed="false">
+    <p>Billing Address Details</p>
+    <div>
+      <button mat-button matStepperPrevious>Back</button>
+      <button mat-button matStepperNext>Next</button>
+    </div>
+  </mat-step>
+  <mat-step label="Place Order" completed="false">
+    <p>Order Details</p>
+    <div>
+      <button mat-button matStepperPrevious>Back</button>
+    </div>
+  </mat-step>
+</mat-vertical-stepper>

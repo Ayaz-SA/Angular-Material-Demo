@@ -1,0 +1,42 @@
+<!-- mat-button -->
+<div>
+  <button mat-button>mat-button</button>
+  <button mat-raised-button>mat-raised-button</button>
+  <button mat-flat-button>mat-flat-button</button>
+  <button mat-stroked-button>mat-stroked-button</button>
+</div>
+<mat-divider></mat-divider>
+
+<div>
+  <button mat-icon-button>mat-icon-button</button>
+  <button mat-fab>mat-fab</button>
+  <button mat-mini-fab>mat-mini-fab</button>
+</div>
+<mat-divider></mat-divider>
+
+<div>
+  <button color="primary" mat-raised-button>Primary</button>
+  <button color="accent" mat-raised-button>Accent</button>
+  <button color="warn"  mat-raised-button>Warn</button>
+
+  <button color="primary" mat-button>Primary</button>
+  <button color="accent" mat-button>Accent</button>
+  <button color="warn" disableRipple mat-button>Warn</button>
+</div>
+<mat-divider></mat-divider>
+
+<!-- button toggle -->
+<div class="toggle-btn">
+  <mat-button-toggle #toggleBtn checked disableRipple disabled>Toggle</mat-button-toggle>{{ toggleBtn.checked }}
+</div>
+<mat-divider></mat-divider>
+
+<!-- button toggle group -->
+<div class="toggle-btn">
+  <mat-button-toggle-group #toggleGroup="matButtonToggleGroup" multiple>
+    <mat-button-toggle value="angular">Angular</mat-button-toggle>
+    <mat-button-toggle value="react">React</mat-button-toggle>
+    <mat-button-toggle value="node">Node</mat-button-toggle>
+  </mat-button-toggle-group>
+  {{ toggleGroup.value }}
+</div>
