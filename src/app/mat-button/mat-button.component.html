@@ -1,5 +1,6 @@
 <!-- mat-button -->
 <div>
+  <strong>Mat Button</strong>
   <button mat-button>mat-button</button>
   <button mat-raised-button>mat-raised-button</button>
   <button mat-flat-button>mat-flat-button</button>
@@ -8,16 +9,18 @@
 <mat-divider></mat-divider>
 
 <div>
-  <button mat-icon-button>mat-icon-button</button>
+  <strong>Circular Button</strong>
+  <button mat-icon-button>Icon</button>
   <button mat-fab>mat-fab</button>
   <button mat-mini-fab>mat-mini-fab</button>
 </div>
 <mat-divider></mat-divider>
 
 <div>
+  <strong>Mat Button with Color</strong>
   <button color="primary" mat-raised-button>Primary</button>
   <button color="accent" mat-raised-button>Accent</button>
-  <button color="warn"  mat-raised-button>Warn</button>
+  <button color="warn" mat-raised-button>Warn</button>
 
   <button color="primary" mat-button>Primary</button>
   <button color="accent" mat-button>Accent</button>
@@ -27,12 +30,14 @@
 
 <!-- button toggle -->
 <div class="toggle-btn">
-  <mat-button-toggle #toggleBtn checked disableRipple disabled>Toggle</mat-button-toggle>{{ toggleBtn.checked }}
+  <strong style="margin-right: 15px; margin-left: 0;">Toggle Button</strong>
+  <mat-button-toggle #toggleBtn checked disableRipple>Toggle</mat-button-toggle>{{ toggleBtn.checked }}
 </div>
 <mat-divider></mat-divider>
 
 <!-- button toggle group -->
 <div class="toggle-btn">
+  <strong style="margin-right: 15px; margin-left: 0;">Toogle Group</strong>
   <mat-button-toggle-group #toggleGroup="matButtonToggleGroup" multiple>
     <mat-button-toggle value="angular">Angular</mat-button-toggle>
     <mat-button-toggle value="react">React</mat-button-toggle>
@@ -40,3 +45,25 @@
   </mat-button-toggle-group>
   {{ toggleGroup.value }}
 </div>
+<mat-divider></mat-divider>
+
+<!-- Tooltip Modelu -->
+<strong>Mat Tooltip</strong>
+<button mat-raised-button
+        matTooltip="Welcome to angular material demo"
+        matTooltipPosition="after"
+        matTooltipShowDelay="500"
+        matTooltipHideDelay="2000"
+>Hello</button>
+
+<mat-divider></mat-divider>
+
+<!-- Mat snackbar -->
+<strong>Mat Snackbar</strong>
+<button mat-raised-button (click)="openSnackBra('Item deleted', 'Dismiss')">Snackbar</button>
+
+<mat-divider></mat-divider>
+
+<!-- Mat Dialog -->
+<strong>Mat Dialog</strong>
+<button mat-raised-button (click)="openDialog()">Open Dialog</button>

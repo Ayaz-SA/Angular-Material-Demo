@@ -14,6 +14,9 @@ import { MatExpansionPanelComponent } from './mat-expansion-panel/mat-expansion-
 import { MatCardComponent } from './mat-card/mat-card.component';
 import { MatTabComponent } from './mat-tab/mat-tab.component';
 import { MatInputModuleComponent } from './mat-input-module/mat-input-module.component';
+import { DialogDemoComponent } from './dialog-demo/dialog-demo.component';
+import { ScrollingModule } from '@angular/cdk/scrolling';
+import { VirtualScrollingComponent } from './virtual-scrolling/virtual-scrolling.component';
 
 @NgModule({
   declarations: [
@@ -25,15 +28,19 @@ import { MatInputModuleComponent } from './mat-input-module/mat-input-module.com
     MatExpansionPanelComponent,
     MatCardComponent,
     MatTabComponent,
-    MatInputModuleComponent
+    MatInputModuleComponent,
+    DialogDemoComponent,
+    VirtualScrollingComponent,
   ],
+  entryComponents: [DialogDemoComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     FormsModule,
     ReactiveFormsModule,
-    MaterialModule
+    MaterialModule,
+    ScrollingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

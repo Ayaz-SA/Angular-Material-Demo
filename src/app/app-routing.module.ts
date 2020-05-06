@@ -8,6 +8,7 @@ import { MatExpansionPanelComponent } from './mat-expansion-panel/mat-expansion-
 import { MatCardComponent } from './mat-card/mat-card.component';
 import { MatTabComponent } from './mat-tab/mat-tab.component';
 import { MatInputModuleComponent } from './mat-input-module/mat-input-module.component';
+import { VirtualScrollingComponent } from './virtual-scrolling/virtual-scrolling.component';
 
 
 const routes: Routes = [
@@ -42,6 +43,11 @@ const routes: Routes = [
   {
     path: 'mat-input',
     component: MatInputModuleComponent
+  }
+  ,
+  {
+    path: 'scrolling',
+    component: VirtualScrollingComponent
   }
 ];
 

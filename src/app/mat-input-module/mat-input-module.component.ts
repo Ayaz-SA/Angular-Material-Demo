@@ -14,7 +14,8 @@ export class MatInputModuleComponent implements OnInit {
   technology: string[] = ['Angular', 'NodeJs', 'React', 'Android']
   myControl: FormControl = new FormControl();
   filteredTechnology: Observable<string[]>;
-
+  minDate = new Date();
+  maxDate = new Date(2020, 5, 24)
   constructor() { }
 
   ngOnInit() {
@@ -29,4 +30,8 @@ export class MatInputModuleComponent implements OnInit {
     return this.technology.filter(tech => tech.toLowerCase().includes(filterValue))
   }
 
+  dateFilter = date => {
+    const day = date.getDay();
+    return day !== 0 && day !== 6;
+  }
 }

@@ -82,6 +82,13 @@
           <mat-radio-button value="react" color="primary">React</mat-radio-button>
         </mat-radio-group>
       </mat-grid-tile>
+      <mat-grid-tile>
+        <mat-form-field>
+          <input matInput [matDatepicker]="datePicker" [matDatepickerFilter]="dateFilter">
+          <mat-datepicker-toggle matSuffix [for]="datePicker"></mat-datepicker-toggle>
+          <mat-datepicker #datePicker></mat-datepicker>
+        </mat-form-field>
+      </mat-grid-tile>
     </mat-grid-list>
   </mat-card>
 

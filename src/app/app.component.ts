@@ -16,6 +16,7 @@ export class AppComponent {
     { icon: 'view_compact', link: 'mat-card', title: 'Mat-Card'},
     { icon: 'table_chart', link: 'mat-tabs', title: 'Mat-Tab & Mat-Stepper'},
     { icon: 'create', link: 'mat-input', title: 'Mat-Input'},
+    { icon: '', link: 'scrolling', title: 'Virtual Scrolling'},
   ]
   ngOnInit() {
   }
